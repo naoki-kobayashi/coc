@@ -1,0 +1,8 @@
+<% @videoList.each.with_index() do |video| %>
+  <h2>Heading</h2>
+  <iframe src="<%= video.url %>" width="160" height="90" frameborder="0" allowfullscreen></iframe>
+  <% video.video_tags do |videoTag| %>
+    hoge<%= videoTag.tag  %>
+  <% end %>
+<% end %>
+
