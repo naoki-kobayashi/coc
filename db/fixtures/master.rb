@@ -12,5 +12,5 @@ TagMaster.seed do |s|
 end
 TagMaster.seed do |s|
   s.id = 3
-  s.tag = 'ゴレホグ'
+  s.tag = ''
 end

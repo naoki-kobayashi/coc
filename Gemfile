@@ -18,6 +18,10 @@ group :test do
 end
 
 gem 'seed-fu', '~> 2.3'
+gem 'cells', github: 'apotonick/cells' 
+gem 'cells-haml', github: 'trailblazer/cells-haml'
+gem 'haml-rails'
+gem 'erb2haml'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
