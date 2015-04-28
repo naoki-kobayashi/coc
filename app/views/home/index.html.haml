@@ -1,8 +1,6 @@
 - @videoList.each.with_index() do |video|
   %h2 Heading
-  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "180", :src => "#{video.url}", :width => "320"}
+  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "163", :src => "#{video.url}", :width => "290"}
   .well.well-sm
-    - video.video_tags.each do |videoTag|
-      = videoTag.tag
-  - @all_tag_list.each do |tag|
-    = tag.tag
+    - @all_tag_list.each do |tag|
+      = tag.tag
