@@ -1,5 +1,3 @@
-- arr = ["app", "ban"]
-= react_component('VideoList', {url:'hoge', tag_list:arr})
 = react_component('Search', tag_list:all_tag_list.pluck(:tag))
 - all_tag_list.each do |tag|
   %p= tag.tag

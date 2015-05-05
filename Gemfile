@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sprockets', '2.12.3'
+#gem 'sprockets', '3.0.0.beta.8'
+#gem 'sprockets-es6'
+#require 'sprockets/es6'
 
 group :development, :test do
   gem 'mysql2'
@@ -16,6 +19,8 @@ group :test do
   gem 'shoulda-matchers', '~> 2.6.0'
   gem 'capybara','2.1.0'
 end
+
+gem 'react-rails', '~> 1.0'
 
 gem 'seed-fu', '~> 2.3'
 gem 'cells', github: 'apotonick/cells' 

@@ -1,6 +1,7 @@
 - @videoList.each.with_index() do |video|
-  %h2 Heading
-  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "163", :src => "#{video.url}", :width => "290"}
-  .well.well-sm
-    - @all_tag_list.each do |tag|
-      = tag.tag
+  = react_component('VideoList', {url:video.url, tag_list:video.video_tags.pluck(:tag)})
+//  %h2 Heading
+//  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "163", :src => "#{video.url}", :width => "290"}
+//  .well.well-sm
+//    - @all_tag_list.each do |tag|
+//      = tag.tag

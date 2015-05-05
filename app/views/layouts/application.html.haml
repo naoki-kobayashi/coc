@@ -37,8 +37,8 @@
             %h1 Hello, world!
             %p This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.
           .row
+            = yield
             .col-xs-6.col-lg-4
-              = yield
               %h2 Heading
               %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
               %p
@@ -77,17 +77,7 @@
           / /row
         / /.col-xs-12.col-sm-9
         #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas
-          = cell(:search_tag).call(:show)
-          .list-group
-            %a.list-group-item.active{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-            %a.list-group-item{:href => "#"} Link
-        / /.sidebar-offcanvas
+          //= cell(:search_tag).call(:show)
+          = render partial: "contents/search", locals: {all_tag_list: @all_tag_list}
+          //.sidebar-offcanvas
       / /row
