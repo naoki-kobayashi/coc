@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_filter :get_tag_list
 
   def index
-    @videoList = Video.all
+    @video_list = Video.all
     @battle_formation = BattleFormation.all
 =begin
     @all_tag_list = VideoTag.select("tag").group("tag")

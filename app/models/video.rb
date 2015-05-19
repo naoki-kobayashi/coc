@@ -5,4 +5,14 @@ class Video < ActiveRecord::Base
     ->(video) { where video_id: video.id },
     class_name: 'VideoTag',
      foreign_key:"video_id"
+
+  def as_json options = {}
+    super :only => ['id', 'url'],
+    :include => {
+      :tag_list => {
+        :only => ['tag']
+      }
+    }
+  end
+
 end

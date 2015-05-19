@@ -1,10 +1,13 @@
-class VideoList extends React.Component{
+class Video extends React.Component{
   constructor(){
-    var mediator = new Mediator();
-    mediator.addReactor(this); 
   }
   render() {
-    var tagList = this.props.tag_list.join(' ');
+    //var tagList = this.props.tagList.join(' ');
+    var tagList = this.props.tagList.map(
+      function(tagObj){
+        return tagObj.tag+" ";
+      }
+    );
 
     return (
       <div className="col-xs-6 col-lg-4">
