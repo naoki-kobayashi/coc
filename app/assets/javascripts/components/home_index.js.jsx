@@ -5,9 +5,9 @@ class HomeIndex extends React.Component{
     var decodedSelectTagList = JSON.parse(props.selectTagList);
     var selectTagList = [];
     for(var i in decodedSelectTagList){
-      selectTagList[i] = {name:decodedSelectTagList[i], isSelect:false};
+      selectTagList[i] = {name:decodedSelectTagList[i].tag, isSelect:false};
     }
-    
+
     this.state = {
       videoList: JSON.parse(props.videoList),
       selectTagList: selectTagList,
@@ -52,6 +52,26 @@ class HomeIndex extends React.Component{
   search(tagId){
     var tmp = this.state.selectTagList;
     tmp[tagId].isSelect = !tmp[tagId].isSelect;
+    var selectedTagList = [];
+    for(var i in tmp){
+      if(tmp[i].isSelect){
+        selectedTagList.push(tmp[i].name);
+      } 
+    }
+
+    var jqXHR = $.ajax({
+      type:"POST",
+      url:"search",
+      dataType:"json",
+      data:{
+        selectedTagList:selectedTagList
+      },
+    });
+    jqXHR.done(function(data, dataType){
+      console.log('success');
+      this.setState({videoList: data});
+    }.bind(this))
+  
     this.setState({selectTagList: tmp});
   }
 }

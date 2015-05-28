@@ -4,7 +4,6 @@ class Search extends React.Component{
       function(tag, i){
         var btnType = tag.isSelect ? 'primary' : 'default'; 
         var btnClass = "btn btn-" + btnType;
-        //return <SearchTag id={i} name={tag.name} selectTag={this.updateTagState.bind(this)} btnClass={btnClass} key={i}/>;
         return <SearchTag id={i} name={tag.name} selectTag={this.props.search.bind(this)} btnClass={btnClass} key={i}/>;
       }
     ,this);

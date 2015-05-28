@@ -1,4 +1,4 @@
-= react_component('HomeIndex', {videoList:@video_list.to_json(), selectTagList:@all_tag_list.to_json()})
+= react_component('HomeIndex', {videoList:@video_list.to_json(), selectTagList:@all_tag_list.to_json(:only => 'tag')})
 //- @videoList.each.with_index() do |video|
 //  = react_component('VideoList', {url:video.url, tag_list:video.video_tags.pluck(:tag)})
 //  %h2 Heading
