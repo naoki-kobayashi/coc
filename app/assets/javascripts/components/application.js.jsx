@@ -35,8 +35,7 @@ class JumboToron extends React.Component{
   render() {
     return(
       <div className="jumbotron">
-        <h1>Hello, world!</h1>
-        <p> This is an example</p>
+        <img src="/assets/logo.png" alt="logo"/>
       </div>
     );
   }
