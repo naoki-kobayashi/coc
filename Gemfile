@@ -9,6 +9,11 @@ gem 'sprockets', '2.12.3'
 #gem 'sprockets-es6'
 #require 'sprockets/es6'
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails','2.13.1'
