@@ -10,7 +10,7 @@ class Header extends React.Component{
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">Project name</a>
+            <a className="navbar-brand" href="#">3Stars</a>
           </div>
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="nav navbar-nav">
@@ -35,7 +35,7 @@ class JumboToron extends React.Component{
   render() {
     return(
       <div className="jumbotron">
-        <img src="/assets/logo.png" alt="logo"/>
+        <img src="/assets/logo.png" style={{"max-width":"100%"}} alt="logo"/>
       </div>
     );
   }
