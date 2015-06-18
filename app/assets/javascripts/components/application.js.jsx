@@ -46,6 +46,8 @@ class SideBar extends React.Component{
     return(
       <div id="sidebar" className="col-xs-6 col-sm-3 sidebar-offcanvas">
         <Search selectTagList={this.props.selectTagList} search={this.props.search.bind(this)} />
+        // admax 
+        <script src="http://adm.shinobi.jp/s/71dde1c8de0e59dfabd123093fa644e9"></script>
       </div>
     );
   }
