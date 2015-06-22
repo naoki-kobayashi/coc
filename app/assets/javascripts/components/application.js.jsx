@@ -1,4 +1,8 @@
 class Header extends React.Component{
+  constructor(props){
+    super(props, this);
+  }
+  
   render() {
     return (
       <nav className="navbar navbar-fixed-top navbar-inverse">
@@ -21,7 +25,7 @@ class Header extends React.Component{
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="/inquiry">Contact</a>
               </li>
             </ul>
           </div>  
@@ -46,7 +50,6 @@ class SideBar extends React.Component{
     return(
       <div id="sidebar" className="col-xs-6 col-sm-3 sidebar-offcanvas">
         <Search selectTagList={this.props.selectTagList} search={this.props.search.bind(this)} />
-        // admax 
         <script src="http://adm.shinobi.jp/s/71dde1c8de0e59dfabd123093fa644e9"></script>
       </div>
     );
