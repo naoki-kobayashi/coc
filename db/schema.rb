@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415085141) do
+ActiveRecord::Schema.define(version: 20150708084415) do
 
   create_table "battle_formations", force: :cascade do |t|
     t.integer  "barbarian_num",    limit: 4, default: 1, null: false
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20150415085141) do
     t.integer  "video_type", limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "created",    limit: 255
   end
 
   add_foreign_key "video_tags", "videos"
